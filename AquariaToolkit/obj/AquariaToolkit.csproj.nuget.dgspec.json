@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Academics\\3Y-3T\\IT140P\\IT140P MP\\src\\AquariaToolkit\\AquariaToolkit\\AquariaToolkit.csproj": {}
+  },
+  "projects": {
+    "G:\\Academics\\3Y-3T\\IT140P\\IT140P MP\\src\\AquariaToolkit\\AquariaToolkit\\AquariaToolkit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Academics\\3Y-3T\\IT140P\\IT140P MP\\src\\AquariaToolkit\\AquariaToolkit\\AquariaToolkit.csproj",
+        "projectName": "AquariaToolkit",
+        "projectPath": "G:\\Academics\\3Y-3T\\IT140P\\IT140P MP\\src\\AquariaToolkit\\AquariaToolkit\\AquariaToolkit.csproj",
+        "packagesPath": "C:\\Users\\Francis\\.nuget\\packages\\",
+        "outputPath": "G:\\Academics\\3Y-3T\\IT140P\\IT140P MP\\src\\AquariaToolkit\\AquariaToolkit\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "G:\\Applications\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Francis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid12.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid12.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid12.0": {
+          "dependencies": {
+            "Xamarin.AndroidX.AppCompat": {
+              "target": "Package",
+              "version": "[1.2.0.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

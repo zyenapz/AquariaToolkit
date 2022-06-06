@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Aquaria Toolkit</string>
+	<string name="app_author">by Francis Tayag</string>
+	<string name="app_project">IT140P Machine Problem</string>
+	<string name="action_settings">Settings</string>
+
+	<!-- Portal -->
+	<string name="portal_header">Aquaria Portal</string>
+	<string name="portal_subtitle">Choose what you want to do</string>
+	<string name="portal_volume">Calculate Volume</string>
+	<string name="portal_expenses">Expenses</string>
+	<string name="portal_compatibility">Fish Compatibility</string>
+	<string name="portal_conversion">Convert Units</string>
+	<string name="portal_about">About</string>
+
+</resources>
