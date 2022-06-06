@@ -10,7 +10,9 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true" android:extractNativeLibs="true">
-    <activity android:label="@string/app_name" android:theme="@style/AppTheme.NoActionBar" android:name="crc64066a7227f8b7783e.MainActivity" android:exported="true">
+    <activity android:label="AboutActivity" android:name="crc64066a7227f8b7783e.AboutActivity" />
+    <activity android:label="CalculateVolumeActivity" android:name="crc64066a7227f8b7783e.VolumeCalculatorActivity" />
+    <activity android:label="@string/app_name" android:name="crc64066a7227f8b7783e.MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

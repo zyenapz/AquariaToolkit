@@ -6,11 +6,39 @@
 
 	<!-- Portal -->
 	<string name="portal_header">Aquaria Portal</string>
-	<string name="portal_subtitle">Choose what you want to do</string>
-	<string name="portal_volume">Calculate Volume</string>
+	<string name="portal_subtitle">Navigate to your desired page</string>
+	<string name="portal_volume">Volume Calculator</string>
 	<string name="portal_expenses">Expenses</string>
 	<string name="portal_compatibility">Fish Compatibility</string>
-	<string name="portal_conversion">Convert Units</string>
+	<string name="portal_conversion">Unit Conversion</string>
 	<string name="portal_about">About</string>
+
+	<!-- Volume Calculator Page -->
+	<string name="volcalc_header">Volume Calculator</string>
+	<string name="volcalc_part1_header">Choose the shape of your aquarium</string>
+	<string name="volcalc_shape_rectangle">Rectangle</string>
+	<string name="volcalc_shape_bowfront">Bow front</string>
+	<string name="volcalc_shape_triangle">Triangle</string>
+	<string name="volcalc_shape_cornerpentagon">Corner Pentagon</string>
+	<string name="volcalc_shape_cylinder">Cylinder</string>
+	<string name="volcalc_shape_halfcylinder">Half Cylinder</string>
+	<string name="volcalc_shape_quartercylinder">Quarter Cylinder</string>
+	<string name="volcalc_prompt">Calculation inputs</string>
+	<string name="volcalc_button">Calculate Volume</string>
+	<string name="volcalc_results_placeholder">Results</string>
+	
+	<!-- About Page -->
+	<string name="about_header">About and Credits</string>
+	<string name="about_article1_header">About this App</string>
+	<string name="about_article1_body">
+		This application is a general toolkit for people who engage in the hobby of fishkeeping. 
+		Developed by Francis Tayag for IT140P Machine Problem.
+	</string>
+	<string name="about_article2_header">Credits and Attributions</string>
+	<string name="about_article2_body">
+		Images and icon were sourced from flaticon.com. 
+		Fish compatibilities were sourced from AquariumIndustries.com.au. 
+		The formula for finding the volume of the bow front aquarium was sourced from InchCalculator\'s Aquarium Tank Volume Calculator.
+	</string>
 
 </resources>

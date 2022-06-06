@@ -1,1 +1,1 @@
-<resources><dimen name="fab_margin">16dp</dimen></resources>
+<resources><dimen name="fab_margin">16dp</dimen><dimen name="shapecard_height">190dp</dimen></resources>

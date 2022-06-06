@@ -2,16 +2,13 @@
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using AndroidX.AppCompat.Widget;
 using AndroidX.AppCompat.App;
 using Google.Android.Material.Card;
-using Google.Android.Material.FloatingActionButton;
-using Google.Android.Material.Snackbar;
+using Android.Content;
 
 namespace AquariaToolkit
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
 
@@ -21,41 +18,25 @@ namespace AquariaToolkit
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            //Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-
+            // Initialize card views
             MaterialCardView cardVolume = FindViewById<MaterialCardView>(Resource.Id.materialCardViewVolume);
-            cardVolume.Click += FabOnClick;
-            cardVolume.Visibility = ViewStates.Invisible;
+            cardVolume.Click += OnCardVolumeClick;
 
-            AquariaWebService.AquariaSOAPService webService = new AquariaWebService.AquariaSOAPService();
+            MaterialCardView cardAbout = FindViewById<MaterialCardView>(Resource.Id.materialCardViewAbout);
+            cardAbout.Click += OnCardAboutClick;
 
-            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            //fab.Click += FabOnClick;
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
+        private void OnCardVolumeClick(object sender, EventArgs eventArgs)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
+            Intent i = new Intent(this, typeof(VolumeCalculatorActivity));
+            StartActivity(i);
         }
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+        private void OnCardAboutClick(object sender, EventArgs eventArgs)
         {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (View.IOnClickListener)null).Show();
+            Intent i = new Intent(this, typeof(AboutActivity));
+            StartActivity(i);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
