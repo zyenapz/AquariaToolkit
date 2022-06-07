@@ -14,17 +14,6 @@ using Google.Android.Material.Snackbar;
 
 namespace AquariaToolkit
 {
-    public enum AquariumShape
-    {
-        Rectangle,
-        Bowfront,
-        Triangle,
-        Pentagon,
-        Cylinder,
-        HalfCylinder,
-        QuarterCylinder
-    }
-
     [Activity(Label = "CalculateVolumeActivity")]
     public class VolumeCalculatorActivity : Activity
     {
@@ -71,6 +60,7 @@ namespace AquariaToolkit
             btnBack = FindViewById<ImageButton>(Resource.Id.imageButtonBack);
             btnCalculate = FindViewById<Button>(Resource.Id.buttonCalculate);
             textViewResults = FindViewById<TextView>(Resource.Id.results);
+            textViewResults.Text = "";
 
             guideImage = FindViewById<ImageView>(Resource.Id.guideImage);
 
@@ -277,9 +267,10 @@ namespace AquariaToolkit
                 double height = Double.Parse(editText2.Text);
                 double width = Double.Parse(editText3.Text);
 
-                double results = webService.get_rectangle_volume(length, width, height);
+                double results = webService.get_rectangle_volume(length, width, height); // returns cm^3
+                double resultsLiter = webService.cm3_to_liter(results);
 
-                DisplayVolumeResultMessage(Math.Round(results, 2).ToString());
+                DisplayVolumeResultMessage(Math.Round(resultsLiter, 2).ToString());
             }
             else
             {
@@ -300,9 +291,10 @@ namespace AquariaToolkit
                 double width2 = Double.Parse(editText3.Text);
                 double height = Double.Parse(editText4.Text);
 
-                double results = webService.get_bowfront_volume(length, width1, width2, height);
+                double results = webService.get_bowfront_volume(length, width1, width2, height); // returns cm^3
+                double resultsLiter = webService.cm3_to_liter(results);
 
-                DisplayVolumeResultMessage(Math.Round(results, 2).ToString());
+                DisplayVolumeResultMessage(Math.Round(resultsLiter, 2).ToString());
             }
             else
             {
@@ -321,9 +313,10 @@ namespace AquariaToolkit
                 double length = Double.Parse(editText2.Text);
                 double height = Double.Parse(editText3.Text);
 
-                double results = webService.get_triangleprism_volume(@base, length, height);
+                double results = webService.get_triangleprism_volume(@base, length, height); // returns cm^3
+                double resultsLiter = webService.cm3_to_liter(results);
 
-                DisplayVolumeResultMessage(Math.Round(results, 2).ToString());
+                DisplayVolumeResultMessage(Math.Round(resultsLiter, 2).ToString());
             }
             else
             {
@@ -342,9 +335,10 @@ namespace AquariaToolkit
                 double shortSide = Double.Parse(editText2.Text);
                 double height = Double.Parse(editText3.Text);
 
-                double results = webService.get_cornerpentagon_volume(longSide, shortSide, height);
+                double results = webService.get_cornerpentagon_volume(longSide, shortSide, height); // returns cm^3
+                double resultsLiter = webService.cm3_to_liter(results);
 
-                DisplayVolumeResultMessage(Math.Round(results, 2).ToString());
+                DisplayVolumeResultMessage(Math.Round(resultsLiter, 2).ToString());
             }
             else
             {
@@ -376,9 +370,10 @@ namespace AquariaToolkit
                         break;
                 } 
 
-                double results = webService.get_cylinder_volume(diameter, height, portion_string);
+                double results = webService.get_cylinder_volume(diameter, height, portion_string); // returns cm^3
+                double resultsLiter = webService.cm3_to_liter(results);
 
-                DisplayVolumeResultMessage(Math.Round(results, 2).ToString());
+                DisplayVolumeResultMessage(Math.Round(resultsLiter, 2).ToString());
             }
             else
             {
@@ -444,7 +439,7 @@ namespace AquariaToolkit
 
         private void DisplayVolumeResultMessage(String results)
         {
-            textViewResults.Text = "Tank's volume is " + results + " cm^3";
+            textViewResults.Text = "Tank's volume is " + results + " liters";
             textViewResults.SetTextColor(Color.LightGreen);
         }
         private void DisplayEmptyInputsMessage()

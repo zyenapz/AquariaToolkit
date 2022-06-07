@@ -67,6 +67,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         private System.Threading.SendOrPostCallback get_cylinder_volumeOperationCompleted;
         
+        private System.Threading.SendOrPostCallback cm3_to_literOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback liter_to_cm3OperationCompleted;
+        
         private System.Threading.SendOrPostCallback calculate_onetime_costOperationCompleted;
         
         private System.Threading.SendOrPostCallback calculate_recurring_costOperationCompleted;
@@ -169,6 +173,12 @@ namespace AquariaToolkit.AquariaWebReference {
         public event get_cylinder_volumeCompletedEventHandler get_cylinder_volumeCompleted;
         
         /// <remarks/>
+        public event cm3_to_literCompletedEventHandler cm3_to_literCompleted;
+        
+        /// <remarks/>
+        public event liter_to_cm3CompletedEventHandler liter_to_cm3Completed;
+        
+        /// <remarks/>
         public event calculate_onetime_costCompletedEventHandler calculate_onetime_costCompleted;
         
         /// <remarks/>
@@ -179,10 +189,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_angelfish_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_angelfish_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_angelfish_id() {
             object[] results = this.Invoke("get_angelfish_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -207,10 +217,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_bettafish_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_bettafish_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_bettafish_id() {
             object[] results = this.Invoke("get_bettafish_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -235,10 +245,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_danio_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_danio_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_danio_id() {
             object[] results = this.Invoke("get_danio_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -263,10 +273,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_commongoldfish_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_commongoldfish_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_commongoldfish_id() {
             object[] results = this.Invoke("get_commongoldfish_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -291,10 +301,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_fancygoldfish_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_fancygoldfish_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_fancygoldfish_id() {
             object[] results = this.Invoke("get_fancygoldfish_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -319,10 +329,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_gourami_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_gourami_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_gourami_id() {
             object[] results = this.Invoke("get_gourami_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -347,10 +357,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_guppy_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_guppy_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_guppy_id() {
             object[] results = this.Invoke("get_guppy_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -375,10 +385,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_molly_id", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_molly_id() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_molly_id() {
             object[] results = this.Invoke("get_molly_id", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -403,10 +413,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_fcm_notcompatible_number", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_fcm_notcompatible_number() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_fcm_notcompatible_number() {
             object[] results = this.Invoke("get_fcm_notcompatible_number", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -431,10 +441,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_fcm_usuallycompatible_number", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_fcm_usuallycompatible_number() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_fcm_usuallycompatible_number() {
             object[] results = this.Invoke("get_fcm_usuallycompatible_number", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -459,10 +469,10 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_fcm_verycompatible_number", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string get_fcm_verycompatible_number() {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int get_fcm_verycompatible_number() {
             object[] results = this.Invoke("get_fcm_verycompatible_number", new object[0]);
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
@@ -744,9 +754,69 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/cm3_to_liter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double cm3_to_liter(double cm3) {
+            object[] results = this.Invoke("cm3_to_liter", new object[] {
+                        cm3});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void cm3_to_literAsync(double cm3) {
+            this.cm3_to_literAsync(cm3, null);
+        }
+        
+        /// <remarks/>
+        public void cm3_to_literAsync(double cm3, object userState) {
+            if ((this.cm3_to_literOperationCompleted == null)) {
+                this.cm3_to_literOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncm3_to_literOperationCompleted);
+            }
+            this.InvokeAsync("cm3_to_liter", new object[] {
+                        cm3}, this.cm3_to_literOperationCompleted, userState);
+        }
+        
+        private void Oncm3_to_literOperationCompleted(object arg) {
+            if ((this.cm3_to_literCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.cm3_to_literCompleted(this, new cm3_to_literCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/liter_to_cm3", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double liter_to_cm3(double liter) {
+            object[] results = this.Invoke("liter_to_cm3", new object[] {
+                        liter});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void liter_to_cm3Async(double liter) {
+            this.liter_to_cm3Async(liter, null);
+        }
+        
+        /// <remarks/>
+        public void liter_to_cm3Async(double liter, object userState) {
+            if ((this.liter_to_cm3OperationCompleted == null)) {
+                this.liter_to_cm3OperationCompleted = new System.Threading.SendOrPostCallback(this.Onliter_to_cm3OperationCompleted);
+            }
+            this.InvokeAsync("liter_to_cm3", new object[] {
+                        liter}, this.liter_to_cm3OperationCompleted, userState);
+        }
+        
+        private void Onliter_to_cm3OperationCompleted(object arg) {
+            if ((this.liter_to_cm3Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.liter_to_cm3Completed(this, new liter_to_cm3CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_onetime_cost", RequestNamespace="", ResponseNamespace="")]
         [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double calculate_onetime_cost(double cost, [System.Xml.Serialization.SoapElementAttribute(DataType="integer")] string quantity) {
+        public double calculate_onetime_cost(double cost, int quantity) {
             object[] results = this.Invoke("calculate_onetime_cost", new object[] {
                         cost,
                         quantity});
@@ -754,12 +824,12 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public void calculate_onetime_costAsync(double cost, string quantity) {
+        public void calculate_onetime_costAsync(double cost, int quantity) {
             this.calculate_onetime_costAsync(cost, quantity, null);
         }
         
         /// <remarks/>
-        public void calculate_onetime_costAsync(double cost, string quantity, object userState) {
+        public void calculate_onetime_costAsync(double cost, int quantity, object userState) {
             if ((this.calculate_onetime_costOperationCompleted == null)) {
                 this.calculate_onetime_costOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_onetime_costOperationCompleted);
             }
@@ -809,21 +879,21 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/compare_fish_compatibility", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return", DataType="integer")]
-        public string compare_fish_compatibility([System.Xml.Serialization.SoapElementAttribute(DataType="integer")] string fish1_id, [System.Xml.Serialization.SoapElementAttribute(DataType="integer")] string fish2_id) {
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public int compare_fish_compatibility(int fish1_id, int fish2_id) {
             object[] results = this.Invoke("compare_fish_compatibility", new object[] {
                         fish1_id,
                         fish2_id});
-            return ((string)(results[0]));
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void compare_fish_compatibilityAsync(string fish1_id, string fish2_id) {
+        public void compare_fish_compatibilityAsync(int fish1_id, int fish2_id) {
             this.compare_fish_compatibilityAsync(fish1_id, fish2_id, null);
         }
         
         /// <remarks/>
-        public void compare_fish_compatibilityAsync(string fish1_id, string fish2_id, object userState) {
+        public void compare_fish_compatibilityAsync(int fish1_id, int fish2_id, object userState) {
             if ((this.compare_fish_compatibilityOperationCompleted == null)) {
                 this.compare_fish_compatibilityOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncompare_fish_compatibilityOperationCompleted);
             }
@@ -876,10 +946,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -902,10 +972,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -928,10 +998,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -954,10 +1024,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -980,10 +1050,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1006,10 +1076,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1032,10 +1102,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1058,10 +1128,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1084,10 +1154,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1110,10 +1180,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1136,10 +1206,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1354,6 +1424,58 @@ namespace AquariaToolkit.AquariaWebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void cm3_to_literCompletedEventHandler(object sender, cm3_to_literCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class cm3_to_literCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal cm3_to_literCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void liter_to_cm3CompletedEventHandler(object sender, liter_to_cm3CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class liter_to_cm3CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal liter_to_cm3CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void calculate_onetime_costCompletedEventHandler(object sender, calculate_onetime_costCompletedEventArgs e);
     
     /// <remarks/>
@@ -1422,10 +1544,10 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        public string Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }

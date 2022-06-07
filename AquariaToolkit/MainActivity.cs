@@ -22,6 +22,9 @@ namespace AquariaToolkit
             MaterialCardView cardVolume = FindViewById<MaterialCardView>(Resource.Id.materialCardViewVolume);
             cardVolume.Click += OnCardVolumeClick;
 
+            MaterialCardView cardFishCompat = FindViewById<MaterialCardView>(Resource.Id.materialCardViewFishCompat);
+            cardFishCompat.Click += OnCardFishCompatClick;
+
             MaterialCardView cardAbout = FindViewById<MaterialCardView>(Resource.Id.materialCardViewAbout);
             cardAbout.Click += OnCardAboutClick;
 
@@ -30,6 +33,12 @@ namespace AquariaToolkit
         private void OnCardVolumeClick(object sender, EventArgs eventArgs)
         {
             Intent i = new Intent(this, typeof(VolumeCalculatorActivity));
+            StartActivity(i);
+        }
+
+        private void OnCardFishCompatClick(object sender, EventArgs eventArgs)
+        {
+            Intent i = new Intent(this, typeof(FishCompatActivity));
             StartActivity(i);
         }
 

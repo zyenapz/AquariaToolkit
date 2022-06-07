@@ -1,3 +1,5 @@
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\mscorlib.dll
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\mscorlib.pdb
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\bin\Debug\AquariaToolkit.dll
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\bin\Debug\AquariaToolkit.pdb
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\bin\Debug\com.companyname.aquariatoolkit.apk
@@ -80,6 +82,15 @@ G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\img_guide_quartercylinder.png
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\img_guide_rectangle.png
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\img_guide_triangle.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\layout\activity_fishcompat.xml
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_angelfish.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_betta.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_commongoldie.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_danio.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_fancygoldie.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_gourami.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_guppy.png
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\drawable\ic_fish_molly.png
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\uploadflags.txt
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\resolvedassemblies.hash
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\AquariaToolkit.dll
@@ -89,8 +100,6 @@ G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\Mono.Android.pdb
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\Mono.Security.dll
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\Mono.Security.pdb
-G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\mscorlib.dll
-G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\mscorlib.pdb
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\System.ComponentModel.Composition.dll
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\System.ComponentModel.Composition.pdb
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\assets\System.Core.dll
@@ -233,6 +242,7 @@ G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\com\google\android\material\R.java
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\com\google\android\material\snackbar\Snackbar_SnackbarActionClickImplementor.java
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\AboutActivity.java
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\FishCompatActivity.java
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\MainActivity.java
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\VolumeCalculatorActivity.java
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64396a3fe5f8138e3f\CustomTabsServiceConnectionImpl.java

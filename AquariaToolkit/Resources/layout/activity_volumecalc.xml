@@ -421,7 +421,7 @@
         </GridLayout>
 
         <TextView
-            android:text="@string/volcalc_results_placeholder"
+            android:text="@string/results_placeholder"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

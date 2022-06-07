@@ -2,10 +2,12 @@ adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher_round.xml
 background;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Button;obj\Debug\120\res\layout\activity_fishcompat.xml
 Button;obj\Debug\120\res\layout\activity_volumecalc.xml
 cache-path;G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\120\res\values\colors.xml
 color;obj\Debug\120\res\values\ic_launcher_background.xml
+com.google.android.material.card.MaterialCardView;obj\Debug\120\res\layout\activity_fishcompat.xml
 com.google.android.material.card.MaterialCardView;obj\Debug\120\res\layout\activity_main.xml
 com.google.android.material.card.MaterialCardView;obj\Debug\120\res\layout\activity_volumecalc.xml
 dimen;obj\Debug\120\res\values\dimens.xml
@@ -14,17 +16,21 @@ external-cache-path;G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\Aquar
 external-path;G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher_round.xml
+GridLayout;obj\Debug\120\res\layout\activity_fishcompat.xml
 GridLayout;obj\Debug\120\res\layout\activity_main.xml
 GridLayout;obj\Debug\120\res\layout\activity_volumecalc.xml
 HorizontalScrollView;obj\Debug\120\res\layout\activity_volumecalc.xml
 ImageButton;obj\Debug\120\res\layout\activity_about.xml
+ImageButton;obj\Debug\120\res\layout\activity_fishcompat.xml
 ImageButton;obj\Debug\120\res\layout\activity_volumecalc.xml
 ImageView;obj\Debug\120\res\layout\activity_about.xml
+ImageView;obj\Debug\120\res\layout\activity_fishcompat.xml
 ImageView;obj\Debug\120\res\layout\activity_main.xml
 ImageView;obj\Debug\120\res\layout\activity_volumecalc.xml
 item;obj\Debug\120\res\menu\menu_main.xml
 item;obj\Debug\120\res\values\styles.xml
 LinearLayout;obj\Debug\120\res\layout\activity_about.xml
+LinearLayout;obj\Debug\120\res\layout\activity_fishcompat.xml
 LinearLayout;obj\Debug\120\res\layout\activity_main.xml
 LinearLayout;obj\Debug\120\res\layout\activity_volumecalc.xml
 menu;obj\Debug\120\res\menu\menu_main.xml
@@ -35,13 +41,18 @@ resources;obj\Debug\120\res\values\ic_launcher_background.xml
 resources;obj\Debug\120\res\values\strings.xml
 resources;obj\Debug\120\res\values\styles.xml
 ScrollView;obj\Debug\120\res\layout\activity_about.xml
+ScrollView;obj\Debug\120\res\layout\activity_fishcompat.xml
 ScrollView;obj\Debug\120\res\layout\activity_main.xml
 Space;obj\Debug\120\res\layout\activity_about.xml
+Space;obj\Debug\120\res\layout\activity_fishcompat.xml
 Space;obj\Debug\120\res\layout\activity_main.xml
+Spinner;obj\Debug\120\res\layout\activity_fishcompat.xml
 string;obj\Debug\120\res\values\strings.xml
 style;obj\Debug\120\res\values\styles.xml
 TextView;obj\Debug\120\res\layout\activity_about.xml
+TextView;obj\Debug\120\res\layout\activity_fishcompat.xml
 TextView;obj\Debug\120\res\layout\activity_main.xml
 TextView;obj\Debug\120\res\layout\activity_volumecalc.xml
 View;obj\Debug\120\res\layout\activity_about.xml
+View;obj\Debug\120\res\layout\activity_fishcompat.xml
 View;obj\Debug\120\res\layout\activity_volumecalc.xml

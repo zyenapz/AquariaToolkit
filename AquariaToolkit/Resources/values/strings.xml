@@ -3,6 +3,7 @@
 	<string name="app_author">by Francis Tayag</string>
 	<string name="app_project">IT140P Machine Problem</string>
 	<string name="action_settings">Settings</string>
+	<string name="results_placeholder">[RESULTS GOES HERE (HIDE)]</string>
 
 	<!-- Portal -->
 	<string name="portal_header">Aquaria Portal</string>
@@ -26,6 +27,12 @@
 	<string name="volcalc_prompt">Calculation inputs</string>
 	<string name="volcalc_button">Calculate Volume</string>
 	<string name="volcalc_results_placeholder">Results</string>
+	
+	<!-- Fish compatibility page -->
+	<string name="fishcom_header">Fish Compatibility</string>
+	<string name="fishcom_fish1_prompt">Select Fish #1</string>
+	<string name="fishcom_fish2_prompt">Select Fish #2</string>
+	<string name="fishcom_btn_submit">Check Compatibility</string>
 	
 	<!-- About Page -->
 	<string name="about_header">About and Credits</string>
