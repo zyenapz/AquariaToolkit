@@ -12,6 +12,7 @@
   <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
     <activity android:name="crc64066a7227f8b7783e.AboutActivity" android:label="AboutActivity" />
     <activity android:name="crc64066a7227f8b7783e.FishCompatActivity" android:label="FishCompatActivity" />
+    <activity android:name="crc64066a7227f8b7783e.UnitConversionActivity" android:label="UnitConversionActivity" />
     <activity android:name="crc64066a7227f8b7783e.VolumeCalculatorActivity" android:label="CalculateVolumeActivity" />
     <activity android:name="crc64066a7227f8b7783e.MainActivity" android:exported="true" android:label="@string/app_name">
       <intent-filter>

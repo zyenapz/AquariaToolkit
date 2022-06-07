@@ -83,7 +83,7 @@
                 android:layout_height="160dp"
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:id="@+id/materialCardView2"
+                android:id="@+id/materialCardViewExpenses"
                 android:clickable="true"
                 android:layout_margin="10dp">
 
@@ -159,7 +159,7 @@
                 android:layout_height="160dp"
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:id="@+id/materialCardView4"
+                android:id="@+id/materialCardViewUnitConversion"
                 android:clickable="true"
                 android:layout_margin="10dp">
 

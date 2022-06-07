@@ -4,7 +4,9 @@ using Android.OS;
 using Android.Runtime;
 using AndroidX.AppCompat.App;
 using Google.Android.Material.Card;
+using Google.Android.Material.Snackbar;
 using Android.Content;
+using Android.Views;
 
 namespace AquariaToolkit
 {
@@ -12,20 +14,26 @@ namespace AquariaToolkit
     public class MainActivity : AppCompatActivity
     {
 
+        MaterialCardView cardVolume, cardExpenses, cardFishCompat, cardUnitConversion, cardAbout;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            // Initialize card views
-            MaterialCardView cardVolume = FindViewById<MaterialCardView>(Resource.Id.materialCardViewVolume);
+            // Find views
+            cardVolume = FindViewById<MaterialCardView>(Resource.Id.materialCardViewVolume);
+            cardExpenses = FindViewById<MaterialCardView>(Resource.Id.materialCardViewExpenses);
+            cardFishCompat = FindViewById<MaterialCardView>(Resource.Id.materialCardViewFishCompat);
+            cardUnitConversion = FindViewById<MaterialCardView>(Resource.Id.materialCardViewUnitConversion);
+            cardAbout = FindViewById<MaterialCardView>(Resource.Id.materialCardViewAbout);
+
+            // Add event handlers
             cardVolume.Click += OnCardVolumeClick;
-
-            MaterialCardView cardFishCompat = FindViewById<MaterialCardView>(Resource.Id.materialCardViewFishCompat);
+            cardExpenses.Click += OnCardExpensesClick;
             cardFishCompat.Click += OnCardFishCompatClick;
-
-            MaterialCardView cardAbout = FindViewById<MaterialCardView>(Resource.Id.materialCardViewAbout);
+            cardUnitConversion.Click += OnCardUnitConversionClick;
             cardAbout.Click += OnCardAboutClick;
 
         }
@@ -36,9 +44,21 @@ namespace AquariaToolkit
             StartActivity(i);
         }
 
+        private void OnCardExpensesClick(object sender, EventArgs eventArgs)
+        {
+            Snackbar.Make((View)sender, "TODO!", Snackbar.LengthLong)
+                .SetAction("Action", (View.IOnClickListener)null).Show();
+        }
+
         private void OnCardFishCompatClick(object sender, EventArgs eventArgs)
         {
             Intent i = new Intent(this, typeof(FishCompatActivity));
+            StartActivity(i);
+        }
+
+        private void OnCardUnitConversionClick(object sender, EventArgs eventArgs)
+        {
+            Intent i = new Intent(this, typeof(UnitConversionActivity));
             StartActivity(i);
         }
 

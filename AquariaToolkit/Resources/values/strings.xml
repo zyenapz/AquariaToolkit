@@ -33,7 +33,14 @@
 	<string name="fishcom_fish1_prompt">Select Fish #1</string>
 	<string name="fishcom_fish2_prompt">Select Fish #2</string>
 	<string name="fishcom_btn_submit">Check Compatibility</string>
-	
+
+	<!-- Unit Conversion page -->
+	<string name="uconv_header">Unit Conversion</string>
+	<string name="uconv_measurement_prompt">Convert for</string>
+	<string name="uconv_to">To</string>
+	<string name="uconv_value_prompt">Enter value to convert</string>
+	<string name="uconv_button_convert">Convert</string>
+
 	<!-- About Page -->
 	<string name="about_header">About and Credits</string>
 	<string name="about_article1_header">About this App</string>

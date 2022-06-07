@@ -67,15 +67,43 @@ namespace AquariaToolkit.AquariaWebReference {
         
         private System.Threading.SendOrPostCallback get_cylinder_volumeOperationCompleted;
         
-        private System.Threading.SendOrPostCallback cm3_to_literOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback liter_to_cm3OperationCompleted;
-        
         private System.Threading.SendOrPostCallback calculate_onetime_costOperationCompleted;
         
         private System.Threading.SendOrPostCallback calculate_recurring_costOperationCompleted;
         
         private System.Threading.SendOrPostCallback compare_fish_compatibilityOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback celsius_to_kelvinOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback kelvin_to_celsiusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback fahrenheit_to_celsiusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback celsius_to_fahrenheitOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback fahrenheit_to_kelvinOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback kelvin_to_fahrenheitOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback cm3_to_literOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback liter_to_cm3OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback liter_to_gallonUSOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback gallonUS_to_literOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback meter_to_centimeterOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback centimeter_to_meterOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback foot_to_inchOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback inch_to_footOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback meter_to_footOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback foot_to_meterOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -173,12 +201,6 @@ namespace AquariaToolkit.AquariaWebReference {
         public event get_cylinder_volumeCompletedEventHandler get_cylinder_volumeCompleted;
         
         /// <remarks/>
-        public event cm3_to_literCompletedEventHandler cm3_to_literCompleted;
-        
-        /// <remarks/>
-        public event liter_to_cm3CompletedEventHandler liter_to_cm3Completed;
-        
-        /// <remarks/>
         public event calculate_onetime_costCompletedEventHandler calculate_onetime_costCompleted;
         
         /// <remarks/>
@@ -186,6 +208,54 @@ namespace AquariaToolkit.AquariaWebReference {
         
         /// <remarks/>
         public event compare_fish_compatibilityCompletedEventHandler compare_fish_compatibilityCompleted;
+        
+        /// <remarks/>
+        public event celsius_to_kelvinCompletedEventHandler celsius_to_kelvinCompleted;
+        
+        /// <remarks/>
+        public event kelvin_to_celsiusCompletedEventHandler kelvin_to_celsiusCompleted;
+        
+        /// <remarks/>
+        public event fahrenheit_to_celsiusCompletedEventHandler fahrenheit_to_celsiusCompleted;
+        
+        /// <remarks/>
+        public event celsius_to_fahrenheitCompletedEventHandler celsius_to_fahrenheitCompleted;
+        
+        /// <remarks/>
+        public event fahrenheit_to_kelvinCompletedEventHandler fahrenheit_to_kelvinCompleted;
+        
+        /// <remarks/>
+        public event kelvin_to_fahrenheitCompletedEventHandler kelvin_to_fahrenheitCompleted;
+        
+        /// <remarks/>
+        public event cm3_to_literCompletedEventHandler cm3_to_literCompleted;
+        
+        /// <remarks/>
+        public event liter_to_cm3CompletedEventHandler liter_to_cm3Completed;
+        
+        /// <remarks/>
+        public event liter_to_gallonUSCompletedEventHandler liter_to_gallonUSCompleted;
+        
+        /// <remarks/>
+        public event gallonUS_to_literCompletedEventHandler gallonUS_to_literCompleted;
+        
+        /// <remarks/>
+        public event meter_to_centimeterCompletedEventHandler meter_to_centimeterCompleted;
+        
+        /// <remarks/>
+        public event centimeter_to_meterCompletedEventHandler centimeter_to_meterCompleted;
+        
+        /// <remarks/>
+        public event foot_to_inchCompletedEventHandler foot_to_inchCompleted;
+        
+        /// <remarks/>
+        public event inch_to_footCompletedEventHandler inch_to_footCompleted;
+        
+        /// <remarks/>
+        public event meter_to_footCompletedEventHandler meter_to_footCompleted;
+        
+        /// <remarks/>
+        public event foot_to_meterCompletedEventHandler foot_to_meterCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_angelfish_id", RequestNamespace="", ResponseNamespace="")]
@@ -754,66 +824,6 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/cm3_to_liter", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double cm3_to_liter(double cm3) {
-            object[] results = this.Invoke("cm3_to_liter", new object[] {
-                        cm3});
-            return ((double)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void cm3_to_literAsync(double cm3) {
-            this.cm3_to_literAsync(cm3, null);
-        }
-        
-        /// <remarks/>
-        public void cm3_to_literAsync(double cm3, object userState) {
-            if ((this.cm3_to_literOperationCompleted == null)) {
-                this.cm3_to_literOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncm3_to_literOperationCompleted);
-            }
-            this.InvokeAsync("cm3_to_liter", new object[] {
-                        cm3}, this.cm3_to_literOperationCompleted, userState);
-        }
-        
-        private void Oncm3_to_literOperationCompleted(object arg) {
-            if ((this.cm3_to_literCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.cm3_to_literCompleted(this, new cm3_to_literCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/liter_to_cm3", RequestNamespace="", ResponseNamespace="")]
-        [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double liter_to_cm3(double liter) {
-            object[] results = this.Invoke("liter_to_cm3", new object[] {
-                        liter});
-            return ((double)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void liter_to_cm3Async(double liter) {
-            this.liter_to_cm3Async(liter, null);
-        }
-        
-        /// <remarks/>
-        public void liter_to_cm3Async(double liter, object userState) {
-            if ((this.liter_to_cm3OperationCompleted == null)) {
-                this.liter_to_cm3OperationCompleted = new System.Threading.SendOrPostCallback(this.Onliter_to_cm3OperationCompleted);
-            }
-            this.InvokeAsync("liter_to_cm3", new object[] {
-                        liter}, this.liter_to_cm3OperationCompleted, userState);
-        }
-        
-        private void Onliter_to_cm3OperationCompleted(object arg) {
-            if ((this.liter_to_cm3Completed != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.liter_to_cm3Completed(this, new liter_to_cm3CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_onetime_cost", RequestNamespace="", ResponseNamespace="")]
         [return: System.Xml.Serialization.SoapElementAttribute("return")]
         public double calculate_onetime_cost(double cost, int quantity) {
@@ -906,6 +916,486 @@ namespace AquariaToolkit.AquariaWebReference {
             if ((this.compare_fish_compatibilityCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.compare_fish_compatibilityCompleted(this, new compare_fish_compatibilityCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/celsius_to_kelvin", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double celsius_to_kelvin(double celsius) {
+            object[] results = this.Invoke("celsius_to_kelvin", new object[] {
+                        celsius});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void celsius_to_kelvinAsync(double celsius) {
+            this.celsius_to_kelvinAsync(celsius, null);
+        }
+        
+        /// <remarks/>
+        public void celsius_to_kelvinAsync(double celsius, object userState) {
+            if ((this.celsius_to_kelvinOperationCompleted == null)) {
+                this.celsius_to_kelvinOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncelsius_to_kelvinOperationCompleted);
+            }
+            this.InvokeAsync("celsius_to_kelvin", new object[] {
+                        celsius}, this.celsius_to_kelvinOperationCompleted, userState);
+        }
+        
+        private void Oncelsius_to_kelvinOperationCompleted(object arg) {
+            if ((this.celsius_to_kelvinCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.celsius_to_kelvinCompleted(this, new celsius_to_kelvinCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/kelvin_to_celsius", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double kelvin_to_celsius(double kelvin) {
+            object[] results = this.Invoke("kelvin_to_celsius", new object[] {
+                        kelvin});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void kelvin_to_celsiusAsync(double kelvin) {
+            this.kelvin_to_celsiusAsync(kelvin, null);
+        }
+        
+        /// <remarks/>
+        public void kelvin_to_celsiusAsync(double kelvin, object userState) {
+            if ((this.kelvin_to_celsiusOperationCompleted == null)) {
+                this.kelvin_to_celsiusOperationCompleted = new System.Threading.SendOrPostCallback(this.Onkelvin_to_celsiusOperationCompleted);
+            }
+            this.InvokeAsync("kelvin_to_celsius", new object[] {
+                        kelvin}, this.kelvin_to_celsiusOperationCompleted, userState);
+        }
+        
+        private void Onkelvin_to_celsiusOperationCompleted(object arg) {
+            if ((this.kelvin_to_celsiusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.kelvin_to_celsiusCompleted(this, new kelvin_to_celsiusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/fahrenheit_to_celsius", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double fahrenheit_to_celsius(double fahrenheit) {
+            object[] results = this.Invoke("fahrenheit_to_celsius", new object[] {
+                        fahrenheit});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void fahrenheit_to_celsiusAsync(double fahrenheit) {
+            this.fahrenheit_to_celsiusAsync(fahrenheit, null);
+        }
+        
+        /// <remarks/>
+        public void fahrenheit_to_celsiusAsync(double fahrenheit, object userState) {
+            if ((this.fahrenheit_to_celsiusOperationCompleted == null)) {
+                this.fahrenheit_to_celsiusOperationCompleted = new System.Threading.SendOrPostCallback(this.Onfahrenheit_to_celsiusOperationCompleted);
+            }
+            this.InvokeAsync("fahrenheit_to_celsius", new object[] {
+                        fahrenheit}, this.fahrenheit_to_celsiusOperationCompleted, userState);
+        }
+        
+        private void Onfahrenheit_to_celsiusOperationCompleted(object arg) {
+            if ((this.fahrenheit_to_celsiusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.fahrenheit_to_celsiusCompleted(this, new fahrenheit_to_celsiusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/celsius_to_fahrenheit", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double celsius_to_fahrenheit(double celsius) {
+            object[] results = this.Invoke("celsius_to_fahrenheit", new object[] {
+                        celsius});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void celsius_to_fahrenheitAsync(double celsius) {
+            this.celsius_to_fahrenheitAsync(celsius, null);
+        }
+        
+        /// <remarks/>
+        public void celsius_to_fahrenheitAsync(double celsius, object userState) {
+            if ((this.celsius_to_fahrenheitOperationCompleted == null)) {
+                this.celsius_to_fahrenheitOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncelsius_to_fahrenheitOperationCompleted);
+            }
+            this.InvokeAsync("celsius_to_fahrenheit", new object[] {
+                        celsius}, this.celsius_to_fahrenheitOperationCompleted, userState);
+        }
+        
+        private void Oncelsius_to_fahrenheitOperationCompleted(object arg) {
+            if ((this.celsius_to_fahrenheitCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.celsius_to_fahrenheitCompleted(this, new celsius_to_fahrenheitCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/fahrenheit_to_kelvin", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double fahrenheit_to_kelvin(double fahrenheit) {
+            object[] results = this.Invoke("fahrenheit_to_kelvin", new object[] {
+                        fahrenheit});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void fahrenheit_to_kelvinAsync(double fahrenheit) {
+            this.fahrenheit_to_kelvinAsync(fahrenheit, null);
+        }
+        
+        /// <remarks/>
+        public void fahrenheit_to_kelvinAsync(double fahrenheit, object userState) {
+            if ((this.fahrenheit_to_kelvinOperationCompleted == null)) {
+                this.fahrenheit_to_kelvinOperationCompleted = new System.Threading.SendOrPostCallback(this.Onfahrenheit_to_kelvinOperationCompleted);
+            }
+            this.InvokeAsync("fahrenheit_to_kelvin", new object[] {
+                        fahrenheit}, this.fahrenheit_to_kelvinOperationCompleted, userState);
+        }
+        
+        private void Onfahrenheit_to_kelvinOperationCompleted(object arg) {
+            if ((this.fahrenheit_to_kelvinCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.fahrenheit_to_kelvinCompleted(this, new fahrenheit_to_kelvinCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/kelvin_to_fahrenheit", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double kelvin_to_fahrenheit(double kelvin) {
+            object[] results = this.Invoke("kelvin_to_fahrenheit", new object[] {
+                        kelvin});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void kelvin_to_fahrenheitAsync(double kelvin) {
+            this.kelvin_to_fahrenheitAsync(kelvin, null);
+        }
+        
+        /// <remarks/>
+        public void kelvin_to_fahrenheitAsync(double kelvin, object userState) {
+            if ((this.kelvin_to_fahrenheitOperationCompleted == null)) {
+                this.kelvin_to_fahrenheitOperationCompleted = new System.Threading.SendOrPostCallback(this.Onkelvin_to_fahrenheitOperationCompleted);
+            }
+            this.InvokeAsync("kelvin_to_fahrenheit", new object[] {
+                        kelvin}, this.kelvin_to_fahrenheitOperationCompleted, userState);
+        }
+        
+        private void Onkelvin_to_fahrenheitOperationCompleted(object arg) {
+            if ((this.kelvin_to_fahrenheitCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.kelvin_to_fahrenheitCompleted(this, new kelvin_to_fahrenheitCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/cm3_to_liter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double cm3_to_liter(double cm3) {
+            object[] results = this.Invoke("cm3_to_liter", new object[] {
+                        cm3});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void cm3_to_literAsync(double cm3) {
+            this.cm3_to_literAsync(cm3, null);
+        }
+        
+        /// <remarks/>
+        public void cm3_to_literAsync(double cm3, object userState) {
+            if ((this.cm3_to_literOperationCompleted == null)) {
+                this.cm3_to_literOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncm3_to_literOperationCompleted);
+            }
+            this.InvokeAsync("cm3_to_liter", new object[] {
+                        cm3}, this.cm3_to_literOperationCompleted, userState);
+        }
+        
+        private void Oncm3_to_literOperationCompleted(object arg) {
+            if ((this.cm3_to_literCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.cm3_to_literCompleted(this, new cm3_to_literCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/liter_to_cm3", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double liter_to_cm3(double liter) {
+            object[] results = this.Invoke("liter_to_cm3", new object[] {
+                        liter});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void liter_to_cm3Async(double liter) {
+            this.liter_to_cm3Async(liter, null);
+        }
+        
+        /// <remarks/>
+        public void liter_to_cm3Async(double liter, object userState) {
+            if ((this.liter_to_cm3OperationCompleted == null)) {
+                this.liter_to_cm3OperationCompleted = new System.Threading.SendOrPostCallback(this.Onliter_to_cm3OperationCompleted);
+            }
+            this.InvokeAsync("liter_to_cm3", new object[] {
+                        liter}, this.liter_to_cm3OperationCompleted, userState);
+        }
+        
+        private void Onliter_to_cm3OperationCompleted(object arg) {
+            if ((this.liter_to_cm3Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.liter_to_cm3Completed(this, new liter_to_cm3CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/liter_to_gallonUS", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double liter_to_gallonUS(double liter) {
+            object[] results = this.Invoke("liter_to_gallonUS", new object[] {
+                        liter});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void liter_to_gallonUSAsync(double liter) {
+            this.liter_to_gallonUSAsync(liter, null);
+        }
+        
+        /// <remarks/>
+        public void liter_to_gallonUSAsync(double liter, object userState) {
+            if ((this.liter_to_gallonUSOperationCompleted == null)) {
+                this.liter_to_gallonUSOperationCompleted = new System.Threading.SendOrPostCallback(this.Onliter_to_gallonUSOperationCompleted);
+            }
+            this.InvokeAsync("liter_to_gallonUS", new object[] {
+                        liter}, this.liter_to_gallonUSOperationCompleted, userState);
+        }
+        
+        private void Onliter_to_gallonUSOperationCompleted(object arg) {
+            if ((this.liter_to_gallonUSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.liter_to_gallonUSCompleted(this, new liter_to_gallonUSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/gallonUS_to_liter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double gallonUS_to_liter(double gallonUS) {
+            object[] results = this.Invoke("gallonUS_to_liter", new object[] {
+                        gallonUS});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void gallonUS_to_literAsync(double gallonUS) {
+            this.gallonUS_to_literAsync(gallonUS, null);
+        }
+        
+        /// <remarks/>
+        public void gallonUS_to_literAsync(double gallonUS, object userState) {
+            if ((this.gallonUS_to_literOperationCompleted == null)) {
+                this.gallonUS_to_literOperationCompleted = new System.Threading.SendOrPostCallback(this.OngallonUS_to_literOperationCompleted);
+            }
+            this.InvokeAsync("gallonUS_to_liter", new object[] {
+                        gallonUS}, this.gallonUS_to_literOperationCompleted, userState);
+        }
+        
+        private void OngallonUS_to_literOperationCompleted(object arg) {
+            if ((this.gallonUS_to_literCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.gallonUS_to_literCompleted(this, new gallonUS_to_literCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/meter_to_centimeter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double meter_to_centimeter(double meter) {
+            object[] results = this.Invoke("meter_to_centimeter", new object[] {
+                        meter});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void meter_to_centimeterAsync(double meter) {
+            this.meter_to_centimeterAsync(meter, null);
+        }
+        
+        /// <remarks/>
+        public void meter_to_centimeterAsync(double meter, object userState) {
+            if ((this.meter_to_centimeterOperationCompleted == null)) {
+                this.meter_to_centimeterOperationCompleted = new System.Threading.SendOrPostCallback(this.Onmeter_to_centimeterOperationCompleted);
+            }
+            this.InvokeAsync("meter_to_centimeter", new object[] {
+                        meter}, this.meter_to_centimeterOperationCompleted, userState);
+        }
+        
+        private void Onmeter_to_centimeterOperationCompleted(object arg) {
+            if ((this.meter_to_centimeterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.meter_to_centimeterCompleted(this, new meter_to_centimeterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/centimeter_to_meter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double centimeter_to_meter(double cm) {
+            object[] results = this.Invoke("centimeter_to_meter", new object[] {
+                        cm});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void centimeter_to_meterAsync(double cm) {
+            this.centimeter_to_meterAsync(cm, null);
+        }
+        
+        /// <remarks/>
+        public void centimeter_to_meterAsync(double cm, object userState) {
+            if ((this.centimeter_to_meterOperationCompleted == null)) {
+                this.centimeter_to_meterOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncentimeter_to_meterOperationCompleted);
+            }
+            this.InvokeAsync("centimeter_to_meter", new object[] {
+                        cm}, this.centimeter_to_meterOperationCompleted, userState);
+        }
+        
+        private void Oncentimeter_to_meterOperationCompleted(object arg) {
+            if ((this.centimeter_to_meterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.centimeter_to_meterCompleted(this, new centimeter_to_meterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/foot_to_inch", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double foot_to_inch(double foot) {
+            object[] results = this.Invoke("foot_to_inch", new object[] {
+                        foot});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void foot_to_inchAsync(double foot) {
+            this.foot_to_inchAsync(foot, null);
+        }
+        
+        /// <remarks/>
+        public void foot_to_inchAsync(double foot, object userState) {
+            if ((this.foot_to_inchOperationCompleted == null)) {
+                this.foot_to_inchOperationCompleted = new System.Threading.SendOrPostCallback(this.Onfoot_to_inchOperationCompleted);
+            }
+            this.InvokeAsync("foot_to_inch", new object[] {
+                        foot}, this.foot_to_inchOperationCompleted, userState);
+        }
+        
+        private void Onfoot_to_inchOperationCompleted(object arg) {
+            if ((this.foot_to_inchCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.foot_to_inchCompleted(this, new foot_to_inchCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/inch_to_foot", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double inch_to_foot(double inch) {
+            object[] results = this.Invoke("inch_to_foot", new object[] {
+                        inch});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void inch_to_footAsync(double inch) {
+            this.inch_to_footAsync(inch, null);
+        }
+        
+        /// <remarks/>
+        public void inch_to_footAsync(double inch, object userState) {
+            if ((this.inch_to_footOperationCompleted == null)) {
+                this.inch_to_footOperationCompleted = new System.Threading.SendOrPostCallback(this.Oninch_to_footOperationCompleted);
+            }
+            this.InvokeAsync("inch_to_foot", new object[] {
+                        inch}, this.inch_to_footOperationCompleted, userState);
+        }
+        
+        private void Oninch_to_footOperationCompleted(object arg) {
+            if ((this.inch_to_footCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.inch_to_footCompleted(this, new inch_to_footCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/meter_to_foot", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double meter_to_foot(double meter) {
+            object[] results = this.Invoke("meter_to_foot", new object[] {
+                        meter});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void meter_to_footAsync(double meter) {
+            this.meter_to_footAsync(meter, null);
+        }
+        
+        /// <remarks/>
+        public void meter_to_footAsync(double meter, object userState) {
+            if ((this.meter_to_footOperationCompleted == null)) {
+                this.meter_to_footOperationCompleted = new System.Threading.SendOrPostCallback(this.Onmeter_to_footOperationCompleted);
+            }
+            this.InvokeAsync("meter_to_foot", new object[] {
+                        meter}, this.meter_to_footOperationCompleted, userState);
+        }
+        
+        private void Onmeter_to_footOperationCompleted(object arg) {
+            if ((this.meter_to_footCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.meter_to_footCompleted(this, new meter_to_footCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/foot_to_meter", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double foot_to_meter(double foot) {
+            object[] results = this.Invoke("foot_to_meter", new object[] {
+                        foot});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void foot_to_meterAsync(double foot) {
+            this.foot_to_meterAsync(foot, null);
+        }
+        
+        /// <remarks/>
+        public void foot_to_meterAsync(double foot, object userState) {
+            if ((this.foot_to_meterOperationCompleted == null)) {
+                this.foot_to_meterOperationCompleted = new System.Threading.SendOrPostCallback(this.Onfoot_to_meterOperationCompleted);
+            }
+            this.InvokeAsync("foot_to_meter", new object[] {
+                        foot}, this.foot_to_meterOperationCompleted, userState);
+        }
+        
+        private void Onfoot_to_meterOperationCompleted(object arg) {
+            if ((this.foot_to_meterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.foot_to_meterCompleted(this, new foot_to_meterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1424,58 +1914,6 @@ namespace AquariaToolkit.AquariaWebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void cm3_to_literCompletedEventHandler(object sender, cm3_to_literCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class cm3_to_literCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal cm3_to_literCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public double Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((double)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void liter_to_cm3CompletedEventHandler(object sender, liter_to_cm3CompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class liter_to_cm3CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal liter_to_cm3CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public double Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((double)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void calculate_onetime_costCompletedEventHandler(object sender, calculate_onetime_costCompletedEventArgs e);
     
     /// <remarks/>
@@ -1548,6 +1986,422 @@ namespace AquariaToolkit.AquariaWebReference {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void celsius_to_kelvinCompletedEventHandler(object sender, celsius_to_kelvinCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class celsius_to_kelvinCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal celsius_to_kelvinCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void kelvin_to_celsiusCompletedEventHandler(object sender, kelvin_to_celsiusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class kelvin_to_celsiusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal kelvin_to_celsiusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void fahrenheit_to_celsiusCompletedEventHandler(object sender, fahrenheit_to_celsiusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class fahrenheit_to_celsiusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal fahrenheit_to_celsiusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void celsius_to_fahrenheitCompletedEventHandler(object sender, celsius_to_fahrenheitCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class celsius_to_fahrenheitCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal celsius_to_fahrenheitCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void fahrenheit_to_kelvinCompletedEventHandler(object sender, fahrenheit_to_kelvinCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class fahrenheit_to_kelvinCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal fahrenheit_to_kelvinCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void kelvin_to_fahrenheitCompletedEventHandler(object sender, kelvin_to_fahrenheitCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class kelvin_to_fahrenheitCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal kelvin_to_fahrenheitCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void cm3_to_literCompletedEventHandler(object sender, cm3_to_literCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class cm3_to_literCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal cm3_to_literCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void liter_to_cm3CompletedEventHandler(object sender, liter_to_cm3CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class liter_to_cm3CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal liter_to_cm3CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void liter_to_gallonUSCompletedEventHandler(object sender, liter_to_gallonUSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class liter_to_gallonUSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal liter_to_gallonUSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void gallonUS_to_literCompletedEventHandler(object sender, gallonUS_to_literCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class gallonUS_to_literCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal gallonUS_to_literCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void meter_to_centimeterCompletedEventHandler(object sender, meter_to_centimeterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class meter_to_centimeterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal meter_to_centimeterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void centimeter_to_meterCompletedEventHandler(object sender, centimeter_to_meterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class centimeter_to_meterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal centimeter_to_meterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void foot_to_inchCompletedEventHandler(object sender, foot_to_inchCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class foot_to_inchCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal foot_to_inchCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void inch_to_footCompletedEventHandler(object sender, inch_to_footCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class inch_to_footCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal inch_to_footCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void meter_to_footCompletedEventHandler(object sender, meter_to_footCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class meter_to_footCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal meter_to_footCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void foot_to_meterCompletedEventHandler(object sender, foot_to_meterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class foot_to_meterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal foot_to_meterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
             }
         }
     }

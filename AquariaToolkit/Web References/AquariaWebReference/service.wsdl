@@ -105,18 +105,6 @@
   <wsdl:message name="get_cylinder_volumeResponse">
     <wsdl:part name="return" type="xsd:double" />
   </wsdl:message>
-  <wsdl:message name="cm3_to_literRequest">
-    <wsdl:part name="cm3" type="xsd:double" />
-  </wsdl:message>
-  <wsdl:message name="cm3_to_literResponse">
-    <wsdl:part name="return" type="xsd:double" />
-  </wsdl:message>
-  <wsdl:message name="liter_to_cm3Request">
-    <wsdl:part name="liter" type="xsd:double" />
-  </wsdl:message>
-  <wsdl:message name="liter_to_cm3Response">
-    <wsdl:part name="return" type="xsd:double" />
-  </wsdl:message>
   <wsdl:message name="calculate_onetime_costRequest">
     <wsdl:part name="cost" type="xsd:double" />
     <wsdl:part name="quantity" type="xsd:int" />
@@ -137,6 +125,102 @@
   </wsdl:message>
   <wsdl:message name="compare_fish_compatibilityResponse">
     <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="celsius_to_kelvinRequest">
+    <wsdl:part name="celsius" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="celsius_to_kelvinResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="kelvin_to_celsiusRequest">
+    <wsdl:part name="kelvin" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="kelvin_to_celsiusResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="fahrenheit_to_celsiusRequest">
+    <wsdl:part name="fahrenheit" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="fahrenheit_to_celsiusResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="celsius_to_fahrenheitRequest">
+    <wsdl:part name="celsius" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="celsius_to_fahrenheitResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="fahrenheit_to_kelvinRequest">
+    <wsdl:part name="fahrenheit" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="fahrenheit_to_kelvinResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="kelvin_to_fahrenheitRequest">
+    <wsdl:part name="kelvin" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="kelvin_to_fahrenheitResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="cm3_to_literRequest">
+    <wsdl:part name="cm3" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="cm3_to_literResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="liter_to_cm3Request">
+    <wsdl:part name="liter" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="liter_to_cm3Response">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="liter_to_gallonUSRequest">
+    <wsdl:part name="liter" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="liter_to_gallonUSResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="gallonUS_to_literRequest">
+    <wsdl:part name="gallonUS" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="gallonUS_to_literResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="meter_to_centimeterRequest">
+    <wsdl:part name="meter" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="meter_to_centimeterResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="centimeter_to_meterRequest">
+    <wsdl:part name="cm" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="centimeter_to_meterResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="foot_to_inchRequest">
+    <wsdl:part name="foot" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="foot_to_inchResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="inch_to_footRequest">
+    <wsdl:part name="inch" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="inch_to_footResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="meter_to_footRequest">
+    <wsdl:part name="meter" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="meter_to_footResponse">
+    <wsdl:part name="return" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="foot_to_meterRequest">
+    <wsdl:part name="foot" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="foot_to_meterResponse">
+    <wsdl:part name="return" type="xsd:double" />
   </wsdl:message>
   <wsdl:portType name="Aquaria SOAP ServicePortType">
     <wsdl:operation name="get_angelfish_id">
@@ -215,14 +299,6 @@
       <wsdl:input message="tns:get_cylinder_volumeRequest" />
       <wsdl:output message="tns:get_cylinder_volumeResponse" />
     </wsdl:operation>
-    <wsdl:operation name="cm3_to_liter">
-      <wsdl:input message="tns:cm3_to_literRequest" />
-      <wsdl:output message="tns:cm3_to_literResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="liter_to_cm3">
-      <wsdl:input message="tns:liter_to_cm3Request" />
-      <wsdl:output message="tns:liter_to_cm3Response" />
-    </wsdl:operation>
     <wsdl:operation name="calculate_onetime_cost">
       <wsdl:input message="tns:calculate_onetime_costRequest" />
       <wsdl:output message="tns:calculate_onetime_costResponse" />
@@ -234,6 +310,70 @@
     <wsdl:operation name="compare_fish_compatibility">
       <wsdl:input message="tns:compare_fish_compatibilityRequest" />
       <wsdl:output message="tns:compare_fish_compatibilityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="celsius_to_kelvin">
+      <wsdl:input message="tns:celsius_to_kelvinRequest" />
+      <wsdl:output message="tns:celsius_to_kelvinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="kelvin_to_celsius">
+      <wsdl:input message="tns:kelvin_to_celsiusRequest" />
+      <wsdl:output message="tns:kelvin_to_celsiusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="fahrenheit_to_celsius">
+      <wsdl:input message="tns:fahrenheit_to_celsiusRequest" />
+      <wsdl:output message="tns:fahrenheit_to_celsiusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="celsius_to_fahrenheit">
+      <wsdl:input message="tns:celsius_to_fahrenheitRequest" />
+      <wsdl:output message="tns:celsius_to_fahrenheitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="fahrenheit_to_kelvin">
+      <wsdl:input message="tns:fahrenheit_to_kelvinRequest" />
+      <wsdl:output message="tns:fahrenheit_to_kelvinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="kelvin_to_fahrenheit">
+      <wsdl:input message="tns:kelvin_to_fahrenheitRequest" />
+      <wsdl:output message="tns:kelvin_to_fahrenheitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cm3_to_liter">
+      <wsdl:input message="tns:cm3_to_literRequest" />
+      <wsdl:output message="tns:cm3_to_literResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="liter_to_cm3">
+      <wsdl:input message="tns:liter_to_cm3Request" />
+      <wsdl:output message="tns:liter_to_cm3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="liter_to_gallonUS">
+      <wsdl:input message="tns:liter_to_gallonUSRequest" />
+      <wsdl:output message="tns:liter_to_gallonUSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="gallonUS_to_liter">
+      <wsdl:input message="tns:gallonUS_to_literRequest" />
+      <wsdl:output message="tns:gallonUS_to_literResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="meter_to_centimeter">
+      <wsdl:input message="tns:meter_to_centimeterRequest" />
+      <wsdl:output message="tns:meter_to_centimeterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="centimeter_to_meter">
+      <wsdl:input message="tns:centimeter_to_meterRequest" />
+      <wsdl:output message="tns:centimeter_to_meterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="foot_to_inch">
+      <wsdl:input message="tns:foot_to_inchRequest" />
+      <wsdl:output message="tns:foot_to_inchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="inch_to_foot">
+      <wsdl:input message="tns:inch_to_footRequest" />
+      <wsdl:output message="tns:inch_to_footResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="meter_to_foot">
+      <wsdl:input message="tns:meter_to_footRequest" />
+      <wsdl:output message="tns:meter_to_footResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="foot_to_meter">
+      <wsdl:input message="tns:foot_to_meterRequest" />
+      <wsdl:output message="tns:foot_to_meterResponse" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Aquaria SOAP ServiceBinding" type="tns:Aquaria SOAP ServicePortType">
@@ -409,24 +549,6 @@
         <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="cm3_to_liter">
-      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/cm3_to_liter" style="rpc" />
-      <wsdl:input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="liter_to_cm3">
-      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/liter_to_cm3" style="rpc" />
-      <wsdl:input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="calculate_onetime_cost">
       <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/calculate_onetime_cost" style="rpc" />
       <wsdl:input>
@@ -447,6 +569,150 @@
     </wsdl:operation>
     <wsdl:operation name="compare_fish_compatibility">
       <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/compare_fish_compatibility" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="celsius_to_kelvin">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/celsius_to_kelvin" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kelvin_to_celsius">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/kelvin_to_celsius" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fahrenheit_to_celsius">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/fahrenheit_to_celsius" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="celsius_to_fahrenheit">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/celsius_to_fahrenheit" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fahrenheit_to_kelvin">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/fahrenheit_to_kelvin" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kelvin_to_fahrenheit">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/kelvin_to_fahrenheit" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cm3_to_liter">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/cm3_to_liter" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="liter_to_cm3">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/liter_to_cm3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="liter_to_gallonUS">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/liter_to_gallonUS" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gallonUS_to_liter">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/gallonUS_to_liter" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="meter_to_centimeter">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/meter_to_centimeter" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="centimeter_to_meter">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/centimeter_to_meter" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foot_to_inch">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/foot_to_inch" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inch_to_foot">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/inch_to_foot" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="meter_to_foot">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/meter_to_foot" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foot_to_meter">
+      <soap:operation soapAction="http://192.168.1.20/aquariasoap/service.php/foot_to_meter" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
