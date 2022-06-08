@@ -67,9 +67,13 @@ namespace AquariaToolkit.AquariaWebReference {
         
         private System.Threading.SendOrPostCallback get_cylinder_volumeOperationCompleted;
         
-        private System.Threading.SendOrPostCallback calculate_onetime_costOperationCompleted;
+        private System.Threading.SendOrPostCallback calculate_electricity_costOperationCompleted;
         
-        private System.Threading.SendOrPostCallback calculate_recurring_costOperationCompleted;
+        private System.Threading.SendOrPostCallback calculate_monthlyOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback calculate_annualOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_meralco_rateOperationCompleted;
         
         private System.Threading.SendOrPostCallback compare_fish_compatibilityOperationCompleted;
         
@@ -201,10 +205,16 @@ namespace AquariaToolkit.AquariaWebReference {
         public event get_cylinder_volumeCompletedEventHandler get_cylinder_volumeCompleted;
         
         /// <remarks/>
-        public event calculate_onetime_costCompletedEventHandler calculate_onetime_costCompleted;
+        public event calculate_electricity_costCompletedEventHandler calculate_electricity_costCompleted;
         
         /// <remarks/>
-        public event calculate_recurring_costCompletedEventHandler calculate_recurring_costCompleted;
+        public event calculate_monthlyCompletedEventHandler calculate_monthlyCompleted;
+        
+        /// <remarks/>
+        public event calculate_annualCompletedEventHandler calculate_annualCompleted;
+        
+        /// <remarks/>
+        public event get_meralco_rateCompletedEventHandler get_meralco_rateCompleted;
         
         /// <remarks/>
         public event compare_fish_compatibilityCompletedEventHandler compare_fish_compatibilityCompleted;
@@ -824,66 +834,120 @@ namespace AquariaToolkit.AquariaWebReference {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_onetime_cost", RequestNamespace="", ResponseNamespace="")]
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_electricity_cost", RequestNamespace="", ResponseNamespace="")]
         [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double calculate_onetime_cost(double cost, int quantity) {
-            object[] results = this.Invoke("calculate_onetime_cost", new object[] {
-                        cost,
-                        quantity});
+        public double calculate_electricity_cost(double kwh) {
+            object[] results = this.Invoke("calculate_electricity_cost", new object[] {
+                        kwh});
             return ((double)(results[0]));
         }
         
         /// <remarks/>
-        public void calculate_onetime_costAsync(double cost, int quantity) {
-            this.calculate_onetime_costAsync(cost, quantity, null);
+        public void calculate_electricity_costAsync(double kwh) {
+            this.calculate_electricity_costAsync(kwh, null);
         }
         
         /// <remarks/>
-        public void calculate_onetime_costAsync(double cost, int quantity, object userState) {
-            if ((this.calculate_onetime_costOperationCompleted == null)) {
-                this.calculate_onetime_costOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_onetime_costOperationCompleted);
+        public void calculate_electricity_costAsync(double kwh, object userState) {
+            if ((this.calculate_electricity_costOperationCompleted == null)) {
+                this.calculate_electricity_costOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_electricity_costOperationCompleted);
             }
-            this.InvokeAsync("calculate_onetime_cost", new object[] {
-                        cost,
-                        quantity}, this.calculate_onetime_costOperationCompleted, userState);
+            this.InvokeAsync("calculate_electricity_cost", new object[] {
+                        kwh}, this.calculate_electricity_costOperationCompleted, userState);
         }
         
-        private void Oncalculate_onetime_costOperationCompleted(object arg) {
-            if ((this.calculate_onetime_costCompleted != null)) {
+        private void Oncalculate_electricity_costOperationCompleted(object arg) {
+            if ((this.calculate_electricity_costCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.calculate_onetime_costCompleted(this, new calculate_onetime_costCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.calculate_electricity_costCompleted(this, new calculate_electricity_costCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_recurring_cost", RequestNamespace="", ResponseNamespace="")]
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_monthly", RequestNamespace="", ResponseNamespace="")]
         [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double calculate_recurring_cost(double cost, double month_freq) {
-            object[] results = this.Invoke("calculate_recurring_cost", new object[] {
-                        cost,
-                        month_freq});
+        public double calculate_monthly(double cost) {
+            object[] results = this.Invoke("calculate_monthly", new object[] {
+                        cost});
             return ((double)(results[0]));
         }
         
         /// <remarks/>
-        public void calculate_recurring_costAsync(double cost, double month_freq) {
-            this.calculate_recurring_costAsync(cost, month_freq, null);
+        public void calculate_monthlyAsync(double cost) {
+            this.calculate_monthlyAsync(cost, null);
         }
         
         /// <remarks/>
-        public void calculate_recurring_costAsync(double cost, double month_freq, object userState) {
-            if ((this.calculate_recurring_costOperationCompleted == null)) {
-                this.calculate_recurring_costOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_recurring_costOperationCompleted);
+        public void calculate_monthlyAsync(double cost, object userState) {
+            if ((this.calculate_monthlyOperationCompleted == null)) {
+                this.calculate_monthlyOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_monthlyOperationCompleted);
             }
-            this.InvokeAsync("calculate_recurring_cost", new object[] {
-                        cost,
-                        month_freq}, this.calculate_recurring_costOperationCompleted, userState);
+            this.InvokeAsync("calculate_monthly", new object[] {
+                        cost}, this.calculate_monthlyOperationCompleted, userState);
         }
         
-        private void Oncalculate_recurring_costOperationCompleted(object arg) {
-            if ((this.calculate_recurring_costCompleted != null)) {
+        private void Oncalculate_monthlyOperationCompleted(object arg) {
+            if ((this.calculate_monthlyCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.calculate_recurring_costCompleted(this, new calculate_recurring_costCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.calculate_monthlyCompleted(this, new calculate_monthlyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_annual", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double calculate_annual(double monthly_cost) {
+            object[] results = this.Invoke("calculate_annual", new object[] {
+                        monthly_cost});
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void calculate_annualAsync(double monthly_cost) {
+            this.calculate_annualAsync(monthly_cost, null);
+        }
+        
+        /// <remarks/>
+        public void calculate_annualAsync(double monthly_cost, object userState) {
+            if ((this.calculate_annualOperationCompleted == null)) {
+                this.calculate_annualOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_annualOperationCompleted);
+            }
+            this.InvokeAsync("calculate_annual", new object[] {
+                        monthly_cost}, this.calculate_annualOperationCompleted, userState);
+        }
+        
+        private void Oncalculate_annualOperationCompleted(object arg) {
+            if ((this.calculate_annualCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.calculate_annualCompleted(this, new calculate_annualCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/get_meralco_rate", RequestNamespace="", ResponseNamespace="")]
+        [return: System.Xml.Serialization.SoapElementAttribute("return")]
+        public double get_meralco_rate() {
+            object[] results = this.Invoke("get_meralco_rate", new object[0]);
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_meralco_rateAsync() {
+            this.get_meralco_rateAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_meralco_rateAsync(object userState) {
+            if ((this.get_meralco_rateOperationCompleted == null)) {
+                this.get_meralco_rateOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_meralco_rateOperationCompleted);
+            }
+            this.InvokeAsync("get_meralco_rate", new object[0], this.get_meralco_rateOperationCompleted, userState);
+        }
+        
+        private void Onget_meralco_rateOperationCompleted(object arg) {
+            if ((this.get_meralco_rateCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_meralco_rateCompleted(this, new get_meralco_rateCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1914,17 +1978,17 @@ namespace AquariaToolkit.AquariaWebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void calculate_onetime_costCompletedEventHandler(object sender, calculate_onetime_costCompletedEventArgs e);
+    public delegate void calculate_electricity_costCompletedEventHandler(object sender, calculate_electricity_costCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class calculate_onetime_costCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class calculate_electricity_costCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal calculate_onetime_costCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal calculate_electricity_costCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1940,17 +2004,69 @@ namespace AquariaToolkit.AquariaWebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void calculate_recurring_costCompletedEventHandler(object sender, calculate_recurring_costCompletedEventArgs e);
+    public delegate void calculate_monthlyCompletedEventHandler(object sender, calculate_monthlyCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class calculate_recurring_costCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class calculate_monthlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal calculate_recurring_costCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal calculate_monthlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void calculate_annualCompletedEventHandler(object sender, calculate_annualCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class calculate_annualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal calculate_annualCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void get_meralco_rateCompletedEventHandler(object sender, get_meralco_rateCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_meralco_rateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_meralco_rateCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

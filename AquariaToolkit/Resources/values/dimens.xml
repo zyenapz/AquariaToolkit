@@ -11,4 +11,7 @@
 	<dimen name="spinner_top_margin">10dp</dimen>
 	<dimen name="spinner_horizontal_margin">50dp</dimen>
 	<dimen name="spinner_width">200dp</dimen>
+
+	<!-- For expenses page -->
+	<dimen name="expenses_textview_width">140dp</dimen>
 </resources>

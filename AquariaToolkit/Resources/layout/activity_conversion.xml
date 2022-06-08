@@ -37,32 +37,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <com.google.android.material.card.MaterialCardView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2"
-        android:padding="20dp">
-
-        <TextView
-            android:text="@string/uconv_measurement_prompt"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:textAlignment="center"/>
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/spinnerMeasurementType"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:id="@+id/space1" />
+        android:id="@+id/materialCardView1">
 
         <LinearLayout
             android:orientation="vertical"
@@ -70,59 +50,102 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout3"
-            android:gravity="center"
-            android:layout_margin="30dp">
+            android:id="@+id/linearLayout2"
+            android:padding="20dp">
 
-            <Spinner
-                android:layout_width="180dp"
-                android:layout_height="30dp"
-                android:id="@+id/spinnerConvertFrom"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout4"
+                android:background="#ffeeeeee"
+                android:padding="20dp">
 
-            <TextView
-                android:text="@string/uconv_to"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView3"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:text="@string/uconv_measurement_prompt"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textAlignment="center"/>
 
-            <Spinner
-                android:layout_width="180dp"
-                android:layout_height="30dp"
-                android:id="@+id/spinnerConvertTo"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/spinnerMeasurementType"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/space1" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout3"
+                    android:gravity="center"
+                    android:layout_margin="30dp">
+
+                    <Spinner
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/spinnerConvertFrom"/>
+
+                    <TextView
+                        android:text="@string/uconv_to"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView3"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"/>
+
+                    <Spinner
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/spinnerConvertTo"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/space2" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextValue"
+                    android:hint="@string/uconv_value_prompt"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:text="@string/volcalc_results_placeholder"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewResults"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"/>
+
+                <Button
+                    android:text="@string/uconv_button_convert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonConvert" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/space2" />
+    </com.google.android.material.card.MaterialCardView>
 
-        <EditText
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextValue"
-            android:hint="@string/uconv_value_prompt"
-            android:textAlignment="center"/>
 
-        <TextView
-            android:text="@string/volcalc_results_placeholder"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewResults"
-            android:layout_margin="20dp"
-            android:textAlignment="center"/>
-
-        <Button
-            android:text="@string/uconv_button_convert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonConvert" />
-
-    </LinearLayout>
 
 </LinearLayout>

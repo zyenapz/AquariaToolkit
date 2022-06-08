@@ -71,7 +71,8 @@
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:id="@+id/materialCardView1"
-                    android:layout_margin="10dp">
+                    android:layout_margin="20dp"
+                    android:background="#ffeeeeee">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -80,8 +81,7 @@
                         android:minWidth="25px"
                         android:minHeight="25px"
                         android:id="@+id/linearLayout2"
-                        android:padding="@dimen/grid_linlayout_padding"
-                        android:layout_margin="@dimen/grid_linlayout_margin">
+                        android:background="#ffeeeeee">
 
                         <TextView
                             android:text="@string/fishcom_fish1_prompt"
@@ -104,7 +104,8 @@
                             android:layout_marginTop="@dimen/spinner_top_margin"
                             android:layout_width="@dimen/spinner_width"
                             android:layout_height="wrap_content"
-                            android:id="@+id/spinnerFish1"/>
+                            android:id="@+id/spinnerFish1"
+                            android:layout_marginBottom="10dp"/>
 
                     </LinearLayout>
 
@@ -116,7 +117,8 @@
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:id="@+id/materialCardView2"
-                    android:layout_margin="10dp">
+                    android:layout_margin="20dp"
+                    android:background="#ffeeeeee">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -124,8 +126,7 @@
                         android:orientation="vertical"
                         android:minWidth="25px"
                         android:minHeight="25px"
-                        android:layout_margin="@dimen/grid_linlayout_margin"
-                        android:padding="@dimen/grid_linlayout_padding"
+                        android:background="#ffeeeeee"
                         android:id="@+id/linearLayout3">
 
                         <TextView
@@ -147,8 +148,8 @@
 
                         <Spinner
                             android:layout_marginTop="@dimen/spinner_top_margin"
-                                                        android:layout_width="@dimen/spinner_width"
-
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_marginBottom="10dp"
                             android:layout_height="wrap_content"
                             android:id="@+id/spinnerFish2" />
 

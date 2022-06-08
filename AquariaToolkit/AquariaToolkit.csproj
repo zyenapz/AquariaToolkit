@@ -65,11 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutActivity.cs" />
-    <Compile Include="AquariumShape.cs" />
-    <Compile Include="FishCompatibilityLevel.cs" />
+    <Compile Include="Enums\AquariumShape.cs" />
+    <Compile Include="Enums\FishCompatibilityLevel.cs" />
+    <Compile Include="ExpensesActivity.cs" />
     <Compile Include="FishCompatActivity.cs" />
-    <Compile Include="FishType.cs" />
-    <Compile Include="MeasurementEnums.cs" />
+    <Compile Include="Enums\FishType.cs" />
+    <Compile Include="Enums\MeasurementEnums.cs" />
     <Compile Include="UnitConversionActivity.cs" />
     <Compile Include="VolumeCalculatorActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -246,6 +247,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_conversion.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_expenses.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

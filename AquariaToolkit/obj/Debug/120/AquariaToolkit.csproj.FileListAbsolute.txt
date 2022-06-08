@@ -349,3 +349,5 @@ G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\layout\activity_conversion.xml
 G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\UnitConversionActivity.java
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\res\layout\activity_expenses.xml
+G:\Academics\3Y-3T\IT140P\IT140P MP\src\AquariaToolkit\AquariaToolkit\obj\Debug\120\android\src\crc64066a7227f8b7783e\ExpensesActivity.java

@@ -46,8 +46,8 @@ namespace AquariaToolkit
 
         private void OnCardExpensesClick(object sender, EventArgs eventArgs)
         {
-            Snackbar.Make((View)sender, "TODO!", Snackbar.LengthLong)
-                .SetAction("Action", (View.IOnClickListener)null).Show();
+            Intent i = new Intent(this, typeof(ExpensesActivity));
+            StartActivity(i);
         }
 
         private void OnCardFishCompatClick(object sender, EventArgs eventArgs)

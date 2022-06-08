@@ -28,6 +28,23 @@
 	<string name="volcalc_button">Calculate Volume</string>
 	<string name="volcalc_results_placeholder">Results</string>
 	
+	<!-- Expenses page -->
+	<string name="expenses_header">Calculate Expenses</string>
+	<string name="expenses_electricity">Electricity Costs</string>
+	<string name="expenses_others">Other costs</string>
+	<string name="expenses_estimated_total">Estimated total</string>
+	<string name="expenses_electricty_charge_placeholder">MERALCO CHARGE PER KWH</string>
+	<string name="expenses_water_kwh">Water Filters (kwH)</string>
+	<string name="expenses_lighting_kwh">Lighting (kwH)</string>
+	<string name="expenses_heaters_kwh">Heaters (kwH)</string>
+	<string name="expenses_filter_foams">Filter foams (₱)</string>
+	<string name="expenses_fish_food">Fish Food (₱/Kg)</string>
+	<string name="expenses_meralco_charge">Electricity rate (Meralco)</string>
+	<string name="expenses_total_placeholder">------</string>
+	<string name="expenses_monthly_total">Estimated Expenses (Monthly)</string>
+	<string name="expenses_annually_total">Estimated Expenses (Annually)</string>
+	<string name="expenses_compute_button">Compute</string>
+	
 	<!-- Fish compatibility page -->
 	<string name="fishcom_header">Fish Compatibility</string>
 	<string name="fishcom_fish1_prompt">Select Fish #1</string>
