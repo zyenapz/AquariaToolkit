@@ -836,24 +836,24 @@ namespace AquariaToolkit.AquariaWebReference {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://192.168.1.20/aquariasoap/service.php/calculate_electricity_cost", RequestNamespace="", ResponseNamespace="")]
         [return: System.Xml.Serialization.SoapElementAttribute("return")]
-        public double calculate_electricity_cost(double kwh) {
+        public double calculate_electricity_cost(double watts) {
             object[] results = this.Invoke("calculate_electricity_cost", new object[] {
-                        kwh});
+                        watts});
             return ((double)(results[0]));
         }
         
         /// <remarks/>
-        public void calculate_electricity_costAsync(double kwh) {
-            this.calculate_electricity_costAsync(kwh, null);
+        public void calculate_electricity_costAsync(double watts) {
+            this.calculate_electricity_costAsync(watts, null);
         }
         
         /// <remarks/>
-        public void calculate_electricity_costAsync(double kwh, object userState) {
+        public void calculate_electricity_costAsync(double watts, object userState) {
             if ((this.calculate_electricity_costOperationCompleted == null)) {
                 this.calculate_electricity_costOperationCompleted = new System.Threading.SendOrPostCallback(this.Oncalculate_electricity_costOperationCompleted);
             }
             this.InvokeAsync("calculate_electricity_cost", new object[] {
-                        kwh}, this.calculate_electricity_costOperationCompleted, userState);
+                        watts}, this.calculate_electricity_costOperationCompleted, userState);
         }
         
         private void Oncalculate_electricity_costOperationCompleted(object arg) {

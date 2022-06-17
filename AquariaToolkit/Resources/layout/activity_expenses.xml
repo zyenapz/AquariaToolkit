@@ -94,7 +94,7 @@
                         android:layout_marginLeft="20dp">
 
                         <TextView
-                            android:text="@string/expenses_water_kwh"
+                            android:text="@string/expenses_water_wh"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:layout_width="@dimen/expenses_textview_width"
                             android:layout_height="match_parent"
@@ -107,7 +107,7 @@
                             android:inputType="numberDecimal"
                             android:layout_width="200dp"
                             android:layout_height="match_parent"
-                            android:id="@+id/editTextWaterFiltersKWH"
+                            android:id="@+id/editTextWaterFiltersWH"
                             android:textAlignment="center"/>
 
                     </LinearLayout>
@@ -123,7 +123,7 @@
                         android:layout_marginLeft="20dp">
 
                         <TextView
-                            android:text="@string/expenses_lighting_kwh"
+                            android:text="@string/expenses_lighting_wh"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:layout_width="@dimen/expenses_textview_width"
                             android:layout_height="match_parent"
@@ -136,7 +136,7 @@
                             android:inputType="numberDecimal"
                             android:layout_width="200dp"
                             android:layout_height="match_parent"
-                            android:id="@+id/editTextLightingKWH"
+                            android:id="@+id/editTextLightingWH"
                             android:textAlignment="center"/>
 
                     </LinearLayout>
@@ -152,7 +152,7 @@
                         android:layout_marginLeft="20dp">
 
                         <TextView
-                            android:text="@string/expenses_heaters_kwh"
+                            android:text="@string/expenses_heaters_wh"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:layout_width="@dimen/expenses_textview_width"
                             android:layout_height="match_parent"
@@ -165,7 +165,7 @@
                             android:inputType="numberDecimal"
                             android:layout_width="200dp"
                             android:layout_height="match_parent"
-                            android:id="@+id/editTextHeatersKWH"
+                            android:id="@+id/editTextHeatersWH"
                             android:textAlignment="center"/>
 
                     </LinearLayout>
@@ -286,6 +286,72 @@
                             android:layout_width="200dp"
                             android:layout_height="match_parent"
                             android:id="@+id/textViewElectricityRate"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:id="@+id/space25" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout20"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:text="@string/expenses_others_total"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_width="@dimen/expenses_textview_width"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView3"
+                            android:textAlignment="textEnd"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:text="@string/expenses_total_placeholder"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewOtherCostTotal"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:id="@+id/space26" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout21"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:text="@string/expenses_electricity_total"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_width="@dimen/expenses_textview_width"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView3"
+                            android:textAlignment="textEnd"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:text="@string/expenses_total_placeholder"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewElectricityCostTotal"
                             android:textAlignment="center"/>
 
                     </LinearLayout>

@@ -106,7 +106,7 @@
     <wsdl:part name="return" type="xsd:double" />
   </wsdl:message>
   <wsdl:message name="calculate_electricity_costRequest">
-    <wsdl:part name="kwh" type="xsd:double" />
+    <wsdl:part name="watts" type="xsd:double" />
   </wsdl:message>
   <wsdl:message name="calculate_electricity_costResponse">
     <wsdl:part name="return" type="xsd:double" />
